@@ -3,23 +3,21 @@
   "hostRequirements": {
     "cpus": 4
   },
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/scala-sdkman:2": {}
+  },
   "waitFor": "onCreateCommand",
   "initializeCommand": "docker system prune -af",
   "updateContentCommand": "python3 -m pip install -r requirements.txt",
-  "postCreateCommand": "",
+  "postCreateCommand": "pip install spylon-kernel && python -m spylon_kernel install --user",
   "customizations": {
     "codespaces": {
       "openFiles": []
-    },
-    "features": {
-    "ghcr.io/devcontainers-contrib/features/scala-sdkman:2": {}
     },
     "vscode": {
       "extensions": [
         "ms-toolsai.jupyter",
         "ms-python.python"
       ]
-    },
-      
-  }
+    }   
 }
