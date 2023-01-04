@@ -4,12 +4,12 @@
     "cpus": 4
   },
   "features": {
-    "ghcr.io/devcontainers-contrib/features/scala-sdkman:2": {}
+    "ghcr.io/devcontainers-contrib/features/scala-sdkman:2": {},
+    "ghcr.io/devcontainers-contrib/features/sbt-sdkman:2": {}
   },
   "waitFor": "onCreateCommand",
   "initializeCommand": "docker system prune -af",
-  "updateContentCommand": "python3 -m pip install -r requirements.txt",
-  "postCreateCommand": "pip install spylon-kernel && python -m spylon_kernel install --user",
+  "updateContentCommand": "python3 -m pip install -r requirements.txt && pip install spylon-kernel && python -m spylon_kernel install --user",
   "customizations": {
     "codespaces": {
       "openFiles": []
