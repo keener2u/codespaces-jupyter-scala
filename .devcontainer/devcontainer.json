@@ -10,7 +10,7 @@
   "waitFor": "onCreateCommand",
   "initializeCommand": "docker system prune -af",
   "updateContentCommand": "python3 -m pip install -r requirements.txt",
-  "postCreateCommand": "pip install spylon-kernel && python -m spylon_kernel install --user",
+  "postCreateCommand": "$ curl -Lo coursier https://git.io/coursier-cli && chmod +x coursier && ./coursier launch --fork almond -- --install",
   "customizations": {
     "codespaces": {
       "openFiles": []
