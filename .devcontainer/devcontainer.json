@@ -10,7 +10,7 @@
   "waitFor": "onCreateCommand",
   "initializeCommand": "docker system prune -af",
   "updateContentCommand": "python3 -m pip install -r requirements.txt",
-  "postCreateCommand": "$ curl -Lo coursier https://git.io/coursier-cli && chmod +x coursier && ./coursier launch --fork almond -- --install",
+  "postCreateCommand": "curl -Lo coursier https://git.io/coursier-cli && chmod +x coursier && ./coursier launch --fork almond -- --install",
   "customizations": {
     "codespaces": {
       "openFiles": []
