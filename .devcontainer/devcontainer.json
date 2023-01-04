@@ -11,11 +11,15 @@
     "codespaces": {
       "openFiles": []
     },
+    "features": {
+    "ghcr.io/devcontainers-contrib/features/scala-sdkman:2": {}
+    },
     "vscode": {
       "extensions": [
         "ms-toolsai.jupyter",
         "ms-python.python"
       ]
-    }
+    },
+      
   }
 }
