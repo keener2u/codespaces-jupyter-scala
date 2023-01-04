@@ -9,7 +9,7 @@
   },
   "waitFor": "onCreateCommand",
   "initializeCommand": "docker system prune -af",
-  "updateContentCommand": "python3 -m pip install -r requirements.txt && pip install spylon-kernel && python -m spylon_kernel install --user",
+  "updateContentCommand": "pip install spylon-kernel && python -m spylon_kernel install --user && python3 -m pip install -r requirements.txt",
   "customizations": {
     "codespaces": {
       "openFiles": []
