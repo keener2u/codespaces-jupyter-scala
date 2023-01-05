@@ -7,10 +7,9 @@
     "ghcr.io/devcontainers-contrib/features/scala-sdkman:2": {},
     "ghcr.io/devcontainers-contrib/features/sbt-sdkman:2": {}
   },
-  "waitFor": "onCreateCommand",
   "initializeCommand": "docker system prune -af",
+  "onCreateCommand": "curl -Lo coursier https://git.io/coursier-cli && chmod +x coursier && ./coursier launch --fork almond -- --install",
   "updateContentCommand": "python3 -m pip install -r requirements.txt",
-  "postCreateCommand": "curl -Lo coursier https://git.io/coursier-cli && chmod +x coursier && ./coursier launch --fork almond -- --install",
   "customizations": {
     "codespaces": {
       "openFiles": []
