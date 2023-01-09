@@ -3,6 +3,8 @@
   "hostRequirements": {
     "cpus": 4
   },
+  "waitFor": "onCreateCommand",
+  "onCreateCommand": "docker image prune"
   "customizations": {
     "codespaces": {
       "openFiles": []
