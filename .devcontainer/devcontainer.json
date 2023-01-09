@@ -1,7 +1,8 @@
 {
   "image": "ghcr.io/keener2u/codespace-scala-jupyter-image:main",
   "hostRequirements": {
-    "cpus": 4
+    "cpus": 4,
+    "storage": "64gb"
   },
   "waitFor": "onCreateCommand",
   "onCreateCommand": "docker image prune -af",
